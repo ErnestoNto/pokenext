@@ -35,7 +35,7 @@ const ListProvider = ({ children }: { children: ReactNode }) => {
     if(value === ''){
       setPokemon(pokemonDefault)
     }else{
-      setPokemon(pokemonDefault.filter(item => item.data.name.includes(value.toLowerCase())))
+      setPokemon(pokemonDefault.filter((item: any) => item.data.name.includes(value.toLowerCase())))
     }
   }
 

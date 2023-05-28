@@ -1,7 +1,7 @@
 import {styled} from 'styled-components'
 
 export const Container = styled.article`
-    background-color: #0E131F;
+    background-color: var(--bg-color);
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;

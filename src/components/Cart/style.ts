@@ -9,7 +9,7 @@ export const Container = styled.div`
     align-items: center;
     gap: 1rem;
     border-radius: 6px;
-    border: 3px solid #CA054D;
+    border: 3px solid var(--color-red);
     box-shadow: 2px 2px 5px #d4d4d8;
 
     img{
@@ -18,7 +18,7 @@ export const Container = styled.div`
 
     span{
         font-size: 1.2rem;
-        color: #CA054D;
+        color: var(--color-red);
     }
 
     button{
@@ -27,7 +27,7 @@ export const Container = styled.div`
         border-radius: 5px;
         padding: .7rem;
         font-size: 1.2rem;
-        background-color: #CA054D;
+        background-color: var(--color-red);
         color: #fafafa;
         cursor: pointer;
 
