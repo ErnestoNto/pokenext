@@ -2,14 +2,21 @@
   width: 100%;
   padding: 10px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   background-color: #9883e5;
   color: #fafafa;
 }
 
+@media screen and (max-width: 450px) {
+  .container {
+  }
+}
+
 .container div {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
 }
@@ -22,21 +29,22 @@
   border-radius: 6px;
 }
 
-.container div nav{
-    display: flex;
-            gap: 10px;
+.container div nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.container div li{
-    list-style: none;
-            font-size: 1.2rem;
+.container div li {
+  list-style: none;
+  font-size: 1.2rem;
 }
 
-.container div li a{
-    color: #fafafa;
-    text-decoration: none;
+.container div li a {
+  color: #fafafa;
+  text-decoration: none;
 }
 
-.container div li a:hover{
-    text-decoration: underline;
+.container div li a:hover {
+  text-decoration: underline;
 }
