@@ -1,17 +1,17 @@
 'use client'
 import React from 'react'
-import * as C from './styles'
 import Link from 'next/link'
+import styles from './styles.module.css'
 
 const SobrePage = () => {
   return (
-    <C.Container>
-      <C.ContentContainer>
+    <main className={styles.container}>
+      <div className={styles.contentContainer}>
         <h3>Quer saber de quê? Volta pra Pokedex</h3>
 
         <Link href='/'>Voltar</Link>
-      </C.ContentContainer>
-    </C.Container>
+      </div>
+    </main>
   )
 }
 

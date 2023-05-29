@@ -1,6 +1,4 @@
-import {styled} from 'styled-components'
-
-export const Container = styled.article`
+.container{
     background-color: var(--bg-color);
     min-height: 100vh;
     display: flex;
@@ -8,4 +6,4 @@ export const Container = styled.article`
     justify-content: center;
     gap: 2rem;
     padding: 20px 0;
-`
+}

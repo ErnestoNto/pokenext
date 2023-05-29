@@ -1,7 +1,8 @@
 import React, { ChangeEvent } from 'react'
-import * as C from  './styles'
 import Link from 'next/link'
 import { useList } from '@/hooks/useList'
+
+import styles from './styles.module.css'
 
 const Header = () => {
   const context = useList()
@@ -11,7 +12,7 @@ const Header = () => {
   }
 
   return (
-    <C.Container>
+    <header className={styles.container}>
       <h1>PokeApi</h1>
 
       <div>
@@ -25,7 +26,7 @@ const Header = () => {
         <li><Link href='/sobre'>Sobre</Link></li>
       </nav>
       </div>
-    </C.Container>
+    </header>
   )
 }
 

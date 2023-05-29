@@ -5,6 +5,7 @@ import axios from 'axios'
 type ListType = {
     pokemon: any
     pokemonDefault: any
+    loading: boolean
     filterBySearch: (value: string) => void
 }
 
@@ -13,10 +14,12 @@ export const ListContext = createContext<ListType | null>(null);
 const ListProvider = ({ children }: { children: ReactNode }) => {
   const [pokemonDefault, setPokemonDefault] = useState([]);
   const [pokemon, setPokemon] = useState([]);
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     const getPokemonList = async () => {
       let array = [];
+      setLoading(true)
 
       for (let i = 1; i <= 151; i++) {
         array.push(`https://pokeapi.co/api/v2/pokemon/${i}`);
@@ -26,6 +29,7 @@ const ListProvider = ({ children }: { children: ReactNode }) => {
         .then((res: any) => {
             setPokemon(res)
             setPokemonDefault(res)
+            setLoading(false)
         });
     };
 
@@ -40,7 +44,7 @@ const ListProvider = ({ children }: { children: ReactNode }) => {
     }
   }
 
-  return <ListContext.Provider value={{pokemon, pokemonDefault, filterBySearch}}>{children}</ListContext.Provider>;
+  return <ListContext.Provider value={{pokemon, pokemonDefault, loading, filterBySearch}}>{children}</ListContext.Provider>;
 };
 
 export default ListProvider
